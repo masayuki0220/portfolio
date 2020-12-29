@@ -5,13 +5,13 @@
       <label class="bars-wrapper" for="nav">
         <v-icon icon="bars" />
       </label>
-      <label id="nav-close-icon" for="nav">
-        <v-icon icon="times" />
-      </label>
       <span class="title">Masayuki Tsuji's Portfolio</span>
       <label id="nav-close" for="nav"></label>
       <div id="content">
         <div class="content-wrapper">
+          <label class="nav-close-icon" for="nav">
+            <v-icon icon="times" />
+          </label>
           <nuxt-link to="/" class="icon-link">
             <root-icon class="icon" src="/images/profile_menu.png" />
           </nuxt-link>
@@ -53,23 +53,26 @@ export default Vue.extend({
   }
   #content {
     width: 80%;
-    height: 100vh;
-    display: none;
+    height: 100%;
     position: fixed;
     top: 0;
     left: 0;
     background-color: white;
     border: 1px solid $color-grey;
+    transform: translateX(-105%);
+    transition: 0.3s ease-in-out;
     z-index: 100;
     .content-wrapper {
       height: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
-      .icon-link {
-        .icon {
-          margin-top: 10px;
-        }
+      .nav-close-icon {
+        display: inline;
+        font-size: 24px;
+        margin-top: 10px;
+        margin-right: 20px;
+        margin-left: auto;
       }
       .menu {
         margin-top: 10px;
@@ -81,9 +84,9 @@ export default Vue.extend({
     }
   }
   #nav-close {
+    display: none;
     width: 100%;
     height: 100vh;
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -91,23 +94,12 @@ export default Vue.extend({
     background-color: rgba(0, 0, 0, 0.65);
     z-index: 99;
   }
-  #nav-close-icon {
-    display: none;
-    font-size: 22px;
-    position: fixed;
-    top: 0;
-    left: 70%;
-    z-index: 101;
-    margin-top: 10px;
-  }
   #nav:checked ~ #content {
     display: block;
+    transform: translateX(0%);
   }
   #nav:checked ~ #nav-close {
     display: block;
-  }
-  #nav:checked ~ #nav-close-icon {
-    display: inline;
   }
 }
 </style>
