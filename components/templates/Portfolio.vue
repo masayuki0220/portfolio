@@ -1,16 +1,7 @@
 <template>
   <div class="portfolio">
-    <header class="portfolio-header is-pc">
-      <div class="portfolio-header-profile">
-        <nuxt-link to="/" class="icon-link">
-          <root-icon class="icon" src="/images/profile_menu.png" />
-        </nuxt-link>
-        <span class="name">Masayuki Tsuji</span>
-        <sns-menu class="sns" />
-      </div>
-      <hr />
-      <header-menu />
-    </header>
+    <header-pc class="portfolio-header-pc is-pc" />
+    <header-sp class="portfolio-header-sp is-mobile" />
     <div class="portfolio-content">
       <div class="title-wrapper">
         <v-icon :icon="icon" class="icon fa-fw" />
@@ -23,12 +14,13 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import RootIcon from '@/components//atoms/RootIcon.vue'
-import HeaderMenu from '@/components/organisms/HeaderMenu.vue'
-import SnsMenu from '@/components//organisms/SnsMenu.vue'
-
+import HeaderPc from '@/components/organisms/HeaderPc.vue'
+import HeaderSp from '@/components/organisms/HeaderSp.vue'
 export default Vue.extend({
-  components: { RootIcon, HeaderMenu, SnsMenu },
+  components: {
+    HeaderPc,
+    HeaderSp,
+  },
   props: {
     title: {
       type: String,
@@ -50,36 +42,13 @@ $content-padding: 20px;
   width: 100%;
   min-height: 100%;
   position: relative;
-  &-header {
+  &-header-pc {
     width: $header-width;
     min-height: 100vh;
-    display: flex;
     position: fixed;
     top: 0;
     left: 0;
-    flex-direction: column;
-    align-items: center;
     background-color: $color-grey2;
-    hr {
-      width: 80%;
-    }
-    &-profile {
-      display: flex;
-      flex-direction: column;
-      padding: 20px;
-      .icon-link {
-        &:hover {
-          opacity: 1;
-        }
-      }
-      .name {
-        text-align: center;
-      }
-      .sns {
-        align-self: center;
-        margin-top: 5px;
-      }
-    }
   }
   &-content {
     position: absolute;
@@ -98,16 +67,27 @@ $content-padding: 20px;
         font-size: 28px;
         margin-right: 5px;
       }
+      .bars {
+        font-size: 28px;
+      }
     }
   }
 }
 
 @media (max-width: $break-point-sp) {
   .portfolio {
-    &-content {
+    position: unset;
+    &-header-sp {
       width: 100%;
+      height: 64px;
+      position: fixed;
       top: 0;
       left: 0;
+      background-color: $color-grey2;
+    }
+    &-content {
+      width: 100%;
+      position: unset;
       padding: 0;
       .title-wrapper {
         font-size: 0.8rem;

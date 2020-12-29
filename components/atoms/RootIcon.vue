@@ -20,4 +20,11 @@ export default Vue.extend({
   width: 160px;
   height: 180px;
 }
+
+@media (max-width: $break-point-sp) {
+  .root-icon {
+    width: 100px;
+    height: 120px;
+  }
+}
 </style>
