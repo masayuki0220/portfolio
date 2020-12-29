@@ -28,10 +28,19 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/scss/variables';
 .header-menu-item {
   &-block {
     display: inline-block;
     padding: 10px 5px;
+  }
+}
+
+@media (max-width: $break-point-sp) {
+  .header-menu-item {
+    &-block {
+      display: block;
+    }
   }
 }
 </style>
