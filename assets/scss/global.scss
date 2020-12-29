@@ -1,0 +1,58 @@
+@import './variables';
+
+html, body {
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+html, body, #__nuxt, #__layout {
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: $color-grey2;
+
+  #__layout > div {
+    height: auto;
+    min-height: 100%;
+  }
+}
+
+
+h1, h2 {
+  font-family: "ヒラギノ角ゴ Pro W6", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+}
+
+span, p {
+  color: $color-base;
+}
+
+a {
+  color: $color-base;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    opacity: .8;
+  }
+}
+
+// Macでスクロールを常に表示するための設定
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}

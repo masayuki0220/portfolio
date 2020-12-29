@@ -1,10 +1,13 @@
+import * as fontawesome from './build/fontawesome'
+
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
+  ssr: true,
   target: 'static',
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'portfolio',
+    title: "辻将幸(Masayuki Tsuji)'s Portfolio",
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -14,7 +17,7 @@ export default {
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [],
+  css: ['@/assets/scss/variables.scss', '@/assets/scss/global.scss'],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [],
@@ -28,6 +31,7 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
+    ['@nuxtjs/fontawesome', { component: 'v-icon' }],
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -48,4 +52,12 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
+
+  fontawesome: {
+    icons: {
+      solid: fontawesome.solid,
+      regular: fontawesome.regular,
+      brands: fontawesome.brands,
+    },
+  },
 }
