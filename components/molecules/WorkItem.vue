@@ -69,4 +69,38 @@ export default Vue.extend({
     }
   }
 }
+@media (max-width: $break-point-sp) {
+  .work-item {
+    flex-direction: column;
+    padding: 0 10px;
+    .image {
+      width: 100%;
+      height: 200px;
+    }
+
+    .content {
+      min-width: 100%;
+      margin-left: 0;
+      white-space: pre-line;
+      text-align: center;
+      .title {
+        margin-top: 5px;
+        margin-bottom: 10px;
+      }
+      .overview {
+        display: block;
+        font-size: 0.8rem;
+      }
+    }
+    &.reverse {
+      .image {
+        order: 1;
+      }
+      .content {
+        order: 2;
+        margin-left: 0;
+      }
+    }
+  }
+}
 </style>

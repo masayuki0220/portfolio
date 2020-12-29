@@ -1,6 +1,6 @@
 <template>
   <div class="portfolio">
-    <header class="portfolio-header">
+    <header class="portfolio-header is-pc">
       <div class="portfolio-header-profile">
         <nuxt-link to="/" class="icon-link">
           <root-icon class="icon" src="/images/profile_menu.png" />
@@ -12,7 +12,10 @@
       <header-menu />
     </header>
     <div class="portfolio-content">
-      <h1 class="title">{{ title }}</h1>
+      <div class="title-wrapper">
+        <v-icon :icon="icon" class="icon fa-fw" />
+        <h1 class="title">{{ title }}</h1>
+      </div>
       <slot></slot>
     </div>
   </div>
@@ -28,6 +31,10 @@ export default Vue.extend({
   components: { RootIcon, HeaderMenu, SnsMenu },
   props: {
     title: {
+      type: String,
+      default: '',
+    },
+    icon: {
       type: String,
       default: '',
     },
@@ -83,6 +90,31 @@ $content-padding: 20px;
     min-height: 100vh;
     background-color: $color-white;
     padding: 0 $content-padding;
+    .title-wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .icon {
+        font-size: 28px;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+@media (max-width: $break-point-sp) {
+  .portfolio {
+    &-content {
+      width: 100%;
+      top: 0;
+      left: 0;
+      padding: 0;
+      .title-wrapper {
+        font-size: 0.8rem;
+        margin-left: 20px;
+        margin-bottom: 20px;
+      }
+    }
   }
 }
 </style>

@@ -21,11 +21,20 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/scss/variables';
 .sns-icon-link {
   .sns-icon {
     width: 24px;
     height: 24px;
     border-radius: 50%;
+  }
+}
+@media (max-width: $break-point-sp) {
+  .sns-icon-link {
+    .sns-icon {
+      width: 36px;
+      height: 36px;
+    }
   }
 }
 </style>

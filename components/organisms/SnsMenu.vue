@@ -1,15 +1,22 @@
 <template>
   <div class="sns-menu">
     <sns-icon
+      class="sns-menu-item"
       href="https://twitter.com/tu_kun_irad"
       src="/images/sns/twitter.png"
     />
     <sns-icon
+      class="sns-menu-item"
       href="https://facebook.com/tu.kun.0220"
       src="/images/sns/facebook.png"
     />
-    <sns-icon href="https://qiita.com/tu-kun" src="/images/sns/qiita.png" />
     <sns-icon
+      class="sns-menu-item"
+      href="https://qiita.com/tu-kun"
+      src="/images/sns/qiita.png"
+    />
+    <sns-icon
+      class="sns-menu-item"
       href="https://github.com/masayuki0220"
       src="/images/sns/github.png"
     />
@@ -27,4 +34,13 @@ export default Vue.extend({
 })
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@import '@/assets/scss/variables';
+@media (max-width: $break-point-sp) {
+  .sns-menu {
+    &-item {
+      margin-right: 7px;
+    }
+  }
+}
+</style>

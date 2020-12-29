@@ -56,3 +56,16 @@ a {
   background-color: rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
 }
+
+.is-mobile {
+  display: none !important;
+}
+
+@media (max-width: $break-point-sp) {
+  .is-pc {
+    display: none !important;
+  }
+  .is-mobile {
+    display: block !important;
+  }
+}

@@ -1,5 +1,5 @@
 <template>
-  <portfolio title="About">
+  <portfolio title="About" icon="user">
     <div class="s-about">
       <div class="profile">
         <div class="name-group">
@@ -7,6 +7,7 @@
           <span class="name">Masayuki Tsuji</span>
         </div>
         <user-icon class="image" src="/images/profile_main.jpg" />
+        <sns-menu class="sns is-mobile" />
       </div>
       <div class="overview">
         <p>
@@ -36,24 +37,24 @@
 import Vue from 'vue'
 import UserIcon from '@/components/atoms/UserIcon.vue'
 import Portfolio from '@/components/templates/Portfolio.vue'
+import SnsMenu from '@/components//organisms/SnsMenu.vue'
 
 export default Vue.extend({
   components: {
     UserIcon,
     Portfolio,
+    SnsMenu,
   },
 })
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/scss/variables';
 .s-about {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 100px;
-  .title {
-    font-size: 22px;
-  }
   .profile {
     display: flex;
     flex-direction: row;
@@ -61,6 +62,9 @@ export default Vue.extend({
       display: flex;
       flex-direction: column;
       align-self: center;
+      .title {
+        font-size: 22px;
+      }
     }
     .name {
       font-size: 36px;
@@ -75,6 +79,35 @@ export default Vue.extend({
   .overview2 {
     .link {
       text-decoration: underline;
+    }
+  }
+}
+@media (max-width: $break-point-sp) {
+  .s-about {
+    margin-top: 0;
+    .profile {
+      flex-direction: column;
+      align-items: center;
+      .name-group {
+        order: 2;
+        .title {
+          text-align: center;
+        }
+      }
+      .image {
+        order: 1;
+        margin-left: 0;
+        margin-bottom: 10px;
+      }
+      .sns {
+        order: 3;
+        margin-top: 10px;
+      }
+    }
+    .overview {
+      max-width: 90%;
+      margin-top: 20px;
+      text-align: center;
     }
   }
 }

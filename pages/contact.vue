@@ -1,5 +1,5 @@
 <template>
-  <portfolio title="Contact">
+  <portfolio title="Contact" icon="envelope">
     <div
       class="formrun-embed"
       data-formrun-form="@tu-kun-irad"
@@ -23,3 +23,9 @@ export default Vue.extend({
   },
 })
 </script>
+
+<style lang="scss" scoped>
+.formrun-embed {
+  width: 100%;
+}
+</style>
