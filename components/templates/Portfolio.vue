@@ -83,7 +83,8 @@ $content-padding: 20px;
       position: sticky;
       top: 0;
       left: 0;
-      background-color: $color-grey2;
+      color: $color-white;
+      background-color: $color-site;
     }
     &-content {
       width: 100%;
