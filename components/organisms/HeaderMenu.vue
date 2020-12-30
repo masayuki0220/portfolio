@@ -8,7 +8,7 @@
         class="header-menu-list"
         :class="{ selected: $route.path === menu.to }"
       >
-        <header-menu-item :icon="menu.icon" :to="menu.to">{{
+        <header-menu-item class="item" :icon="menu.icon" :to="menu.to">{{
           menu.text
         }}</header-menu-item>
       </li>
@@ -54,7 +54,7 @@ export default Vue.extend({
   &-title {
     padding: 5px 0;
     color: $color-white;
-    background-color: $color-blue;
+    background-color: $color-site;
     text-align: center;
   }
   .header-menu-lists {
@@ -63,10 +63,14 @@ export default Vue.extend({
     font-size: unset;
     .header-menu-list {
       list-style: none;
-      padding: 5px 0;
       border-bottom: 1px solid $color-grey;
+      position: relative;
+      &:hover {
+        background-color: $color-site3;
+      }
       &.selected {
         pointer-events: none;
+        background-color: $color-site2;
       }
     }
   }

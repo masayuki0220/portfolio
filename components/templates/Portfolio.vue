@@ -49,6 +49,7 @@ $content-padding: 20px;
     position: fixed;
     top: 0;
     left: 0;
+    overflow: auto;
     background-color: $color-grey2;
   }
   &-content {
@@ -64,12 +65,10 @@ $content-padding: 20px;
       display: flex;
       flex-direction: row;
       align-items: center;
+      color: $color-site;
       .icon {
         font-size: 28px;
         margin-right: 5px;
-      }
-      .bars {
-        font-size: 28px;
       }
     }
   }

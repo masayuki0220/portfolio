@@ -31,7 +31,7 @@ export default Vue.extend({
 .header-menu-item {
   &-block {
     display: block;
-    padding: 10px 5px;
+    padding: 15px 5px;
   }
 }
 </style>

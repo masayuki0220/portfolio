@@ -42,6 +42,7 @@ export default Vue.extend({
     margin-bottom: auto;
   }
   .sns {
+    margin-top: 10px;
     margin-bottom: 10px;
   }
 }
