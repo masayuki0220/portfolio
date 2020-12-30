@@ -1,5 +1,10 @@
 <template>
-  <a :href="href" class="sns-icon-link" target="_blank">
+  <a
+    :href="href"
+    class="sns-icon-link"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
     <img :src="src" class="sns-icon" alt="sns icon" lazy />
   </a>
 </template>
