@@ -11,7 +11,12 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'CTO、Webエンジニアとして活動している辻将幸(Masayuki Tsuji)のポートフォリオサイト。「アイラッド」の屋号を掲げフリーランス（個人事業主）として事業のサポートをエンジニアリングでサポートしています。',
+      },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
