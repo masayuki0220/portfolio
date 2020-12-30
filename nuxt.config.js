@@ -42,6 +42,7 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    'nuxt-webfontloader',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -58,6 +59,12 @@ export default {
       solid: fontawesome.solid,
       regular: fontawesome.regular,
       brands: fontawesome.brands,
+    },
+  },
+
+  webfontloader: {
+    google: {
+      families: ['Noto+Sans+JP:400,700'],
     },
   },
 }
