@@ -44,6 +44,7 @@ $content-padding: 20px;
   position: relative;
   &-header-pc {
     width: $header-width;
+    height: 100%;
     min-height: 100vh;
     position: fixed;
     top: 0;

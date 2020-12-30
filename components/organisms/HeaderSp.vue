@@ -12,10 +12,11 @@
           <label class="nav-close-icon" for="nav">
             <v-icon icon="times" />
           </label>
-          <nuxt-link to="/" class="icon-link">
-            <root-icon class="icon" src="/images/profile_menu.png" />
-          </nuxt-link>
-          <span class="name">Masayuki Tsuji</span>
+          <div class="logo-wrapper">
+            <nuxt-link to="/" class="icon-link">
+              <root-icon class="icon" src="/images/logo.jpg" />
+            </nuxt-link>
+          </div>
           <header-menu class="menu" />
           <sns-menu class="sns" />
         </div>
@@ -70,9 +71,12 @@ export default Vue.extend({
       .nav-close-icon {
         display: inline;
         font-size: 24px;
-        margin-top: 10px;
+        margin-top: 5px;
         margin-right: 20px;
         margin-left: auto;
+      }
+      .logo-wrapper {
+        padding: 0 50px;
       }
       .menu {
         margin-top: 10px;

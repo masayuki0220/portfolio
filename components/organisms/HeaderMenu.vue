@@ -1,6 +1,6 @@
 <template>
   <nav class="header-menu">
-    <div class="header-menu-title is-mobile">Menu</div>
+    <div class="header-menu-title">Menu</div>
     <ul class="header-menu-lists">
       <li
         v-for="(menu, index) in menus"
@@ -50,13 +50,21 @@ export default Vue.extend({
 <style lang="scss" scoped>
 @import '@/assets/scss/variables';
 .header-menu {
+  width: 100%;
+  &-title {
+    padding: 5px 0;
+    color: $color-white;
+    background-color: $color-blue;
+    text-align: center;
+  }
   .header-menu-lists {
     margin: unset;
     padding: unset;
     font-size: unset;
     .header-menu-list {
       list-style: none;
-      margin: 10px 0;
+      padding: 5px 0;
+      border-bottom: 1px solid $color-grey;
       &.selected {
         pointer-events: none;
       }
@@ -66,21 +74,7 @@ export default Vue.extend({
 
 @media (max-width: $break-point-sp) {
   .header-menu {
-    width: 100%;
     font-size: 20px;
-    &-title {
-      padding: 5px 0;
-      color: $color-white;
-      background-color: $color-blue;
-      text-align: center;
-    }
-    .header-menu-lists {
-      .header-menu-list {
-        margin: unset;
-        padding: 5px 0;
-        border-bottom: 1px solid $color-grey;
-      }
-    }
   }
 }
 </style>

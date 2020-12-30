@@ -1,15 +1,13 @@
 <template>
   <header>
     <div class="header-pc">
-      <div class="header-pc-profile">
+      <div class="logo-wrapper">
         <nuxt-link to="/" class="icon-link">
-          <root-icon class="icon" src="/images/profile_menu.png" />
+          <root-icon class="icon" src="/images/logo.jpg" />
         </nuxt-link>
-        <span class="name">Masayuki Tsuji</span>
-        <sns-menu class="sns" />
       </div>
-      <hr />
-      <header-menu />
+      <header-menu class="menu" />
+      <sns-menu class="sns" />
     </div>
   </header>
 </template>
@@ -28,27 +26,23 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .header-pc {
   display: flex;
+  height: 100%;
   flex-direction: column;
   align-items: center;
-  hr {
-    width: 80%;
-  }
-  &-profile {
-    display: flex;
-    flex-direction: column;
+  .logo-wrapper {
     padding: 20px;
     .icon-link {
       &:hover {
         opacity: 1;
       }
     }
-    .name {
-      text-align: center;
-    }
-    .sns {
-      align-self: center;
-      margin-top: 5px;
-    }
+  }
+  .menu {
+    margin-top: 10px;
+    margin-bottom: auto;
+  }
+  .sns {
+    margin-bottom: 10px;
   }
 }
 </style>

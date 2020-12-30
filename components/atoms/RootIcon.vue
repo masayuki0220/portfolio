@@ -1,5 +1,5 @@
 <template>
-  <img :src="src" class="root-icon" alt="masayuki tsuji's profile image" lazy />
+  <img :src="src" class="root-icon" alt="irad" lazy />
 </template>
 
 <script lang="ts">
@@ -15,16 +15,8 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/scss/variables';
 .root-icon {
-  width: 160px;
-  height: 180px;
-}
-
-@media (max-width: $break-point-sp) {
-  .root-icon {
-    width: 100px;
-    height: 120px;
-  }
+  width: 100%;
+  height: 100%;
 }
 </style>

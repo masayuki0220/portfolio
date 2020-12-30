@@ -35,12 +35,9 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/scss/variables';
-@media (max-width: $break-point-sp) {
-  .sns-menu {
-    &-item {
-      margin-right: 7px;
-    }
+.sns-menu {
+  &-item {
+    margin-right: 7px;
   }
 }
 </style>
