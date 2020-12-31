@@ -86,7 +86,7 @@ export default Vue.extend({
         },
         {
           image: '/images/works/work_android.jpg',
-          title: '在庫管理アプリ試作品アプリ開発',
+          title: '在庫管理Androidアプリ試作品開発',
           overviews: [
             '<Androidアプリの開発を担当>',
             '・OCRによるリース商品ラベルの読み取り実装',
