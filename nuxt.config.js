@@ -1,4 +1,5 @@
 import * as fontawesome from './build/fontawesome'
+import meta from './build/meta'
 require('dotenv').config()
 
 export default {
@@ -8,18 +9,7 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    titleTemplate: "%s | 辻将幸(Masayuki Tsuji)'s Portfolio",
-    title: 'Home',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      {
-        hid: 'description',
-        name: 'description',
-        content:
-          'CTO、Webエンジニアとして活動している辻将幸(Masayuki Tsuji)のポートフォリオサイト。「アイラッド」の屋号を掲げフリーランス（個人事業主）として事業のサポートをエンジニアリングでサポートしています。',
-      },
-    ],
+    ...meta,
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
