@@ -1,4 +1,5 @@
 import * as fontawesome from './build/fontawesome'
+require('dotenv').config()
 
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
@@ -36,6 +37,7 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
+    '@nuxtjs/google-analytics',
     ['@nuxtjs/fontawesome', { component: 'v-icon' }],
   ],
 
@@ -47,6 +49,7 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    '@nuxtjs/dotenv',
     'nuxt-webfontloader',
   ],
 
@@ -58,6 +61,15 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
+
+  googleAnalytics: {
+    id: process.env.GOOGLE_ANALYTICS_ID,
+  },
+  publicRuntimeConfig: {
+    googleAnalytics: {
+      id: process.env.GOOGLE_ANALYTICS_ID,
+    },
+  },
 
   fontawesome: {
     icons: {

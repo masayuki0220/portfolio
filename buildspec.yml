@@ -5,6 +5,9 @@
 #  → アップロード先のS3バケットを指定する(ex: s3://bucket-name)
 version: 0.2
 
+env:
+  parameter-store:
+    GOOGLE_ANALYTICS_ID: /irad/portfolio/GOOGLE_ANALYTICS_ID
 phases:
   install:
     runtime-versions:
