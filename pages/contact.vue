@@ -18,6 +18,7 @@ export default Vue.extend({
   },
   head() {
     return {
+      title: 'Contact',
       script: [{ src: 'https://sdk.form.run/js/v2/embed.js' }],
     }
   },

@@ -45,6 +45,11 @@ export default Vue.extend({
     Portfolio,
     SnsMenu,
   },
+  head() {
+    return {
+      title: 'About',
+    }
+  },
 })
 </script>
 

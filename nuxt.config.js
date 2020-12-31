@@ -8,7 +8,8 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: "辻将幸(Masayuki Tsuji)'s Portfolio",
+    titleTemplate: "%s | 辻将幸(Masayuki Tsuji)'s Portfolio",
+    title: 'Home',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
