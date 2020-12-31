@@ -37,6 +37,7 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
+    '@nuxtjs/sitemap',
     '@nuxtjs/google-analytics',
     ['@nuxtjs/fontawesome', { component: 'v-icon' }],
   ],
@@ -61,6 +62,12 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
+
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://portfolio.irad.site',
+    exclude: ['/contact'],
+  },
 
   googleAnalytics: {
     id: process.env.GOOGLE_ANALYTICS_ID,
